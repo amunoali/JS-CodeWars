@@ -78,14 +78,43 @@
 // pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
 // pigIt('Hello world !');     // elloHay orldway !
 
-function pigIt(str){
-  const arr = str.split(' ')
-  return arr
-  .map((word) =>{
-    return word.match(/[A-z]/i)
-    ? `${word.substr(1)}${word.substr(0,1)}ay`
-    : word
-  })
-  .join(' ')
-}
+// function pigIt(str){
+//   const arr = str.split(' ')
+//   return arr
+//   .map((word) =>{
+//     return word.match(/[A-z]/i)
+//     ? `${word.substr(1)}${word.substr(0,1)}ay`
+//     : word
+//   })
+//   .join(' ')
+// }
 
+// function isPrime(num){
+//   for (let i = 2; i <= Math.sqart(num); i++){
+//     if(num % i == 0){
+//       return false
+//     }
+//   }
+//   return num > 1
+// }
+//cipher question we did not get
+// function rot13(message) {
+//   return message.replace(/[a-z]/gi, letter => String.fromCharCode(letter.charCodeAt(0) + (letter.toLowerCase() <= 'm' ? 13 : -13)));
+// } 
+// My friend John and I are members of the "Fat to Fit Club (FFC)". John is worried because each month a list with the weights of members is published and each month he is the last on the list which means he is the heaviest.
+
+// I am the one who establishes the list so I told him: "Don't worry any more, I will modify the order of the list". It was decided to attribute a "weight" to numbers. The weight of a number will be from now on the sum of its digits.
+
+// For example 99 will have "weight" 18, 100 will have "weight" 1 so in the list 100 will come before 99.
+
+// Given a string with the weights of FFC members in normal order can you give this string ordered by "weights" of these numbers?
+function sumOfParts(num) {
+  return num.split('').reduce((a, b) => a + +b, 0)
+} 
+
+function orderWeight(string) {
+  return string
+      .split(' ')
+      .sort((a, b) => sumOfParts(a) - sumOfParts(b) || a > b || -(a < b))
+      .join(' ');
+}
