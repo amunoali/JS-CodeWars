@@ -39,15 +39,53 @@
 //     return sum;
 //   }
 
-// function inArray(array1,array2){
-//   return array1
-//     .filter(a1 => array2.find(a2 => a2.match(a1)))
-//     .sort()
-// }
+
 
 //return odd or even
-function findOutlier(int){
-  var even = int.filter(a=>a%2==0);
-  var odd = int.filter(a=>a%2!==0);
-  return even.length==1? even[0] : odd[0];
+// function findOutlier(int){
+//   var even = int.filter(a=>a%2==0);
+//   var odd = int.filter(a=>a%2!==0);
+//   return even.length==1? even[0] : odd[0];
+// }
+
+//return longest string:
+// You are given an array(list) strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array. strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], k = 2
+
+// Concatenate the consecutive strings of strarr by 2, we get:
+
+// treefoling   (length 10)  concatenation of strarr[0] and strarr[1]
+// folingtrashy ("      12)  concatenation of strarr[1] and strarr[2]
+// trashyblue   ("      10)  concatenation of strarr[2] and strarr[3]
+// blueabcdef   ("      10)  concatenation of strarr[3] and strarr[4]
+// abcdefuvwxyz ("      12)  concatenation of strarr[4] and strarr[5]
+
+// function longestConsec(strarr, k){
+//   let longest = ""
+//   for(let i = 0; k > 0 && i <= strarr.length - k;i++){
+//     let tempArray = strarr.slice(i, i+k)
+//     let tempStr = tempArray.join("")
+//     if (tempStr.length > longest.length){
+//       longest = tempStr
+//     }
+//   }
+//   return longest
+// }
+
+
+// Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+
+// Examples
+// pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
+// pigIt('Hello world !');     // elloHay orldway !
+
+function pigIt(str){
+  const arr = str.split(' ')
+  return arr
+  .map((word) =>{
+    return word.match(/[A-z]/i)
+    ? `${word.substr(1)}${word.substr(0,1)}ay`
+    : word
+  })
+  .join(' ')
 }
+
