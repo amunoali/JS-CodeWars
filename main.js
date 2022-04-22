@@ -108,13 +108,29 @@
 // For example 99 will have "weight" 18, 100 will have "weight" 1 so in the list 100 will come before 99.
 
 // Given a string with the weights of FFC members in normal order can you give this string ordered by "weights" of these numbers?
-function sumOfParts(num) {
-  return num.split('').reduce((a, b) => a + +b, 0)
-} 
+// function sumOfParts(num) {
+//   return num.split('').reduce((a, b) => a + +b, 0)
+// } 
 
-function orderWeight(string) {
-  return string
-      .split(' ')
-      .sort((a, b) => sumOfParts(a) - sumOfParts(b) || a > b || -(a < b))
-      .join(' ');
+// function orderWeight(string) {
+//   return string
+//       .split(' ')
+//       .sort((a, b) => sumOfParts(a) - sumOfParts(b) || a > b || -(a < b))
+//       .join(' ');
+// }
+//return a quadratic function:
+
+// function quadratic(x1, x2) {
+//   return [1, -(x2 + x1), x1 * x2];
+// }
+
+//same case porblem
+function sameCase(a, b){
+  if(a.toUpperCase() === a.toLowerCase() && b.toLowerCase() === b.toUpperCase()) {
+     return -1
+     }else if(a === a.toLowerCase() && b === b.toLowerCase() || b === b.toUpperCase() && a == a.toUpperCase){
+       return 1
+     }else{
+       return 0
+     }
 }
