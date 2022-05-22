@@ -43,7 +43,7 @@ function subt(a,b){
 }
 
 
-best practice:
+// best practice:
 // const add = (a, b) => a + b;
 // const subt = (a, b) => a - b;
 // const divide = (a, b) => a / b;
