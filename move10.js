@@ -4,3 +4,7 @@
 
 // Input will be a string with length > 0.
 
+function moveTen(s){
+    return s.replace(/./g, x=> 'klmnopqrstuvwxyzabcdefghij'[x.charCodeAt(0)- 97])
+  
+  }
