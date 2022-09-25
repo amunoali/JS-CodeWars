@@ -15,7 +15,7 @@
 
 // is_square([3, 4, 7, 9]) --> False
 
-// is_square([]) --> None
+
 
 
 var isSquare = function(arr){
