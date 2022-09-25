@@ -5,5 +5,5 @@
 // Go and get it working!
 
 function semicolonSeparationToCommaSeparation(input) {
-    return input.replace(/;/gi, ',');  
+    return input.split(';')._join(',') 
   }
