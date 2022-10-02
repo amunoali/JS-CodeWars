@@ -23,6 +23,18 @@
 //p: I can hardcode and write each letter associated with the proper number. 
 
 
-function getThatMessage(letter){
-    
+function getThatMessage(n){
+    const numbersToLetters = {
+        0: 'O',
+        1: 'I',
+        2: 'Z',
+        3: 'E',
+        4: 'h',
+        5: 'S',
+        6: 'G',
+        7: 'L',
+        8: 'B',
+        9: 'q'
+    }
+return n.split('').map(x => numbersToLetters[x] || x ).join('')
 }
