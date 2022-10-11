@@ -10,16 +10,6 @@
 
 
 function power(x,y){
-    var result = 1;
-    for(var i=0;i<y;i++){
-      result = result*x;
-    }
-    return result;
-  }
+    return x**y
+ }
 
-//   A simpler way is to use ** for exponents. 
-// ex: function power(x,y){
-//     return x**y
-// }
-// or
-// const power = (x,y) => x ** y ;
