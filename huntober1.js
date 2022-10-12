@@ -12,4 +12,3 @@ if (num % 5 == 0 && num % 3 == 0){
 console.log(fizzBuzz(20))
 console.log(fizzBuzz(15))
 console.log(fizzBuzz(18))
-console.log(fizzBuzz(200))
