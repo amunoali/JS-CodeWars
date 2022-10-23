@@ -9,8 +9,8 @@
 // remove("Hi! Hi!") === "Hi Hi"
 // remove("!!!Hi !!hi!!! !hi") === "!!!Hi !!hi !hi"
 
-// function remove(s){
-//     return s.replace(/\b!+/g, '');  
-//   }
+function remove(s){
+    return s.replace(/\b!+/g, '');  
+  }
 
 
