@@ -14,7 +14,7 @@
 // findDeletedNumber([1,2,3,4,5,6,7,8,9], [5,7,6,9,4,8,1,2,3]), 0, 'No deletion')
 
 //taking im arr of seq-one ordered, another not sorted with deleted num
-//returning the deleted num along with if it was deleted or not. return 0 if not
+//returning the deleted num along with if it was deleted or not return 0 if not
 
 
 function findDeletedNumber(arr, mixArr){
