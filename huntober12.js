@@ -15,12 +15,31 @@
 
 //taking im arr of seq-one ordered, another not sorted with deleted num
 //returning the deleted num along with if it was deleted or not return 0 if not
+//other options/quadractic 
+// function findDeletedNumber(arr, deletedSeq){
+//     return arr.filter(x=> !mixArr.includes(x))[0]||0
+// }
+// function findDeletedNumber(arr, mixArr){
+//     return  arr.filter(x=> mixArr.indexOf(x) == -1)[0] || 0 
+
+// }
+
+//no missing numbers- length is the same.
+
 
 
 function findDeletedNumber(arr, mixArr){
-    return  arr.filter(x=> mixArr.indexOf(x) == -1)[0] || 0 
+   if (arr.length === mixArr.length){
+       return 0
+   }else{
+       //sum and subtract will give you missing num
+       let arrSum = arr.reduce((acc, c)=> acc + c, 0)
+       let mixSum = mixArr.reduce((acc, c)=> acc + c, 0)
+       return arrSum - mixSum
+   }
 
 }
+//linear function-much faster
 
 console.log(findDeletedNumber([1,2,3,4,5], [3,4,1,5]),  2, 'Deletion')
 
@@ -29,7 +48,3 @@ console.log(findDeletedNumber([1,2,3,4,5,6,7,8,9], [1,9,7,4,6,2,3,8]),  5, 'Dele
 console.log(findDeletedNumber([1,2,3,4,5,6,7,8,9], [5,7,6,9,4,8,1,2,3]), 0, 'No deletion')
 
 
-//other options
-// function findDeletedNumber(arr, deletedSeq){
-//     return arr.filter(x=> !mixArr.includes(x))[0]||0
-// }
