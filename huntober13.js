@@ -14,7 +14,7 @@
 // arrayDiff([1,8,2], []), [1,8,2], "a was [1,8,2], b was []"
 
 function arrayDiff(a,b){
-    //if(a.length == 0 || b.length == 0) {return 0} //constant
+    //if(a.length == 0 || b.length == 0) {return 0} 
     let newSet = new Set(b)
     return a.filter(x=> !newSet.has(x))
 }
