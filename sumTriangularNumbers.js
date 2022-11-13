@@ -12,7 +12,6 @@
 
 // Triangular Numbers cannot be negative so return 0 if a negative number is given.
 
-
 function sumTriangularNumbers(n) {
     if (n < 0){
       return 0
