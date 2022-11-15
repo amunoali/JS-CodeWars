@@ -15,7 +15,7 @@ function sortArray(array){
   //return array.map(n =>  n % 2 == 0 ? n : oddNums.shift()) //linear time
 
   const oddNums = array.filter(x => x % 2 ).sort((a,b)=> b -a)
-  return array.map(n =>  n % 2 == 0 ? n : oddNums.pop()) //const time
+  return array.map(n =>  n % 2 ? n : oddNums.pop()) //const time
 }
 
 
