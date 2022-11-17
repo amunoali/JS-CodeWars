@@ -6,9 +6,9 @@
 // assert.strictEqual(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]), 42); 
 // assert.strictEqual(sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']), 41); 
 
-//taking array of strings and numbers-any neg
-//returning sum of the numbers
-//arrays come with methods 
+// taking array of strings and numbers-any neg
+// returning sum of the numbers
+// arrays come with methods 
 
 
 function sumMix(arr){
