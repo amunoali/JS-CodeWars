@@ -10,11 +10,14 @@
 // dup(["abracadabra","allottee","assessee"]),['abracadabra','alote','asese'])
 // dup(["kelless","keenness"]), ['keles','kenes'])
 
-function dup(s){
+function dup(arr){
 //taking in arr of words with duplicates-all lowercase, no spaces
 //returning arr with dup removed
-return s.map(x => x.split('').filter((c,i,arr)=> c !== arr[i-1]).join(''))
+//map -> word - split - filter - join
+return arr.map(
+    word => word.split('').filter((l,i,a)=> l !== a[i-1]).join('')
+    )
 
 }
 
-console.log(dup(["ccooddddddewwwaaaaarrrrsssss","piccaninny","hubbubbubboo"],['codewars','picaniny','hubububo']))
+console.log(dup(["ccooddddddewwwaaaaarrrrsssss","piccaninny","hubbubbubboo"],"['codewars','picaniny','hubububo']"))
