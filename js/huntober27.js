@@ -20,27 +20,35 @@
 // Output: 3
 // Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 
+
+
+// function fib(n){
+//     let arr = [0,1]
+
+//     for (let i =2; i<= n; i++){
+//         arr[i] = arr[i - 1] + arr[i -2]
+//     }
+//     return arr[n]
+// }
+
+// console.log(fib(2), 1)
+// console.log(fib(4), 3)
+
+
+// function countDown(n){
+//     if (n === 0){
+//         console.log('Done')
+//     }else{
+//         console.log(n)
+//         countDown(n-1)
+//     }
+// }
+// countDown(3)
+
 //recursion example:
-
-function fib(n){
-    let arr = [0,1]
-
-    for (let i =2; i<= n; i++){
-        arr[i] = arr[i - 1] + arr[i -2]
-    }
-    return arr[n]
+function fib(num){
+    if(num<2){ return num }
+    return fib(num-1) + fib(num-2)
 }
-
-console.log(fib(2), 1)
+ console.log(fib(2), 1)
 console.log(fib(4), 3)
-
-
-function countDown(n){
-    if (n === 0){
-        console.log('Done')
-    }else{
-        console.log(n)
-        countDown(n-1)
-    }
-}
-countDown(3)
