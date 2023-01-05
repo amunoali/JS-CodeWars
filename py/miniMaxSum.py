@@ -6,7 +6,6 @@
 
 # 16 24
 
-
 def miniMaxSum(arr):
     arr.sort()
     mini = sum(arr[0:4])
