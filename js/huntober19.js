@@ -23,10 +23,10 @@
 
 // //loop inside loop- its O(5n)
 
-function missingVowel(str){
-    return [...'aeiou'].findIndex(x => !str.includes(x))
+// function missingVowel(str){
+//     return [...'aeiou'].findIndex(x => !str.includes(x))
 
 
-}
-console.log(missingVowel("John Doe hs seven red pples under his bsket"  ), '0' )
-console.log(missingVowel("Bb Smith sent us six neatly arranged range bicycles"  ), '3' )
+// }
+// console.log(missingVowel("John Doe hs seven red pples under his bsket"  ), '0' )
+// console.log(missingVowel("Bb Smith sent us six neatly arranged range bicycles"  ), '3' )
