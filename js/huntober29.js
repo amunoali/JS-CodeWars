@@ -15,12 +15,12 @@ function mygcd(x,y){
 }
 
 //Using recursion 
-function mygcd(a,b){
-    if(b === 0){
-        return a
-    }
-    return mygcd(b, a % b)
-}
+// function mygcd(a,b){
+//     if(b === 0){
+//         return a
+//     }
+//     return mygcd(b, a % b)
+// }
 
 console.log(mygcd(30,12), 6)
 console.log(mygcd(8,9),1)
