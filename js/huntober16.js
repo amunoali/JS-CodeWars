@@ -17,13 +17,13 @@
 
 
 
-    function averageLength(arr) { 
-        //findd average length- rounded
-        const avgLength = Math.round(arr.join('').length / arr.length)
-        return arr.map(str => str[0].repeat(avgLength))
-        //create new arr using each letter the avg length amount
+    // function averageLength(arr) { 
+    //     //findd average length- rounded
+    //     const avgLength = Math.round(arr.join('').length / arr.length)
+    //     return arr.map(str => str[0].repeat(avgLength))
+    //     //create new arr using each letter the avg length amount
 
-        }
+    //     }
 
     console.log(averageLength( ['aa', 'bbb', 'cccc'] ), "['aaa', 'bbb', 'ccc']")
     console.log(averageLength( ['aa', 'bb', 'ddd', 'eee'] ), "['aaa', 'bbb', 'ddd', 'eee']")
