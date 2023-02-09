@@ -21,22 +21,49 @@
 // As long as the tests pass, go for it!
 
 
-class Queue {
-    constructor(){
-        this.list = []
+// class Queue {
+//     constructor(){
+//         this.list = []
+//     }
+
+//   size() {
+//     return this.list.length
+// }
+
+//    enqueue(item){
+//     this.list.push(item)
+// }
+
+// dequeue(){
+//   return this.list.shift()
+// }
+
+//   }
+
+class Stack {
+    constructor() {
+      this.storage = {}
+      this.size = 0
     }
-
-  size() {
-    return this.list.length
-}
-
-   enqueue(item){
-    this.list.push(item)
-}
-
-dequeue(){
-  return this.list.shift()
-}
-
+    push(element) {
+      this.size++
+      this.storage[this.size] = element
+    }
+    pop() {
+      let removed = this.storage[this.size]
+      delete this.storage[this.size]
+      this.size--
+      return removed
+    }
+    peek() {
+      return this.storage[this.size]
+    }
   }
-
+  
+  const stack = new Stack()
+  
+  stack.push('apple')
+  stack.push('banana')
+  stack.push('plum')
+  
+  stack.pop()
