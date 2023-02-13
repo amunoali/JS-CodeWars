@@ -7,8 +7,15 @@
 
 // 7 and 3 produce the largest product.
 
-function solution(inputArray) {
-    return inputArray.slice(0, -1)
-                .reduce((max, n, i) => Math.max(max, n * inputArray[i + 1]), -Infinity)
-    }
+// function solution(inputArray) {
+//     return inputArray.slice(0, -1)
+//                 .reduce((max, n, i) => Math.max(max, n * inputArray[i + 1]), -Infinity)
+//     }
     
+function solution(inputArray) {
+    let results = Number.NEGATIVE_INFINITY
+    for (let i = 0; i <inputArray.length -1; i++){
+        results = Math.max(results, inputArray[i] * inputArray[i + 1])
+    }
+return results
+}
