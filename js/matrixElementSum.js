@@ -20,6 +20,6 @@ function solution(matrix) {
      total += matrix[x][y]
    }
  }
-  //
+  
  return total;
 }
