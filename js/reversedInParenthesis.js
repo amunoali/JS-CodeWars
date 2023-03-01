@@ -37,7 +37,7 @@ function solution(inputString) {
       while(x.includes('(')){
           const endBracket = x.indexOf(')')
           const startBracket = x.lastIndexOf('(', endBracket)
-          // const s = x.slice(startBracket +1, endBracket)
+         
           const reversedS = x.slice(startBracket +1, endBracket).split('').reverse().join('')
           x = x.slice(0, startBracket) + reversedS + x.slice(endBracket + 1)
       }
