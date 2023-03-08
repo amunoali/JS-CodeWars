@@ -13,11 +13,19 @@
 //                      "*ded*",
 //                      "*****"]
 
-function solution(picture) {
-    picture = picture.map(e => '*'.concat(e,'*'))
-    let x = picture[0].length
-    picture.unshift(Array(x).fill('*').join(''))
-    picture.push(Array(x).fill('*').join(''))
+// function solution(picture) {
+//     picture = picture.map(e => '*'.concat(e,'*'))
+//     let x = picture[0].length
+//     picture.unshift(Array(x).fill('*').join(''))
+//     picture.push(Array(x).fill('*').join(''))
 
-    return picture;
-}
+//     return picture;
+// }
+
+function solution(picture) {
+    const verticalBorder = '*'.repeat(picture[0].length);
+   
+   picture.unshift(verticalBorder);
+   picture.push(verticalBorder);
+   return picture.map( (el) => '*' + el + '*' );
+   }
