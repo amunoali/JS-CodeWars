@@ -21,7 +21,7 @@
 
 //     return picture;
 // }
-
+//other solution
 function solution(picture) {
     const verticalBorder = '*'.repeat(picture[0].length);
    
